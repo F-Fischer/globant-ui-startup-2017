@@ -3,21 +3,25 @@
   <head>
     <meta charset="utf-8">
     <title>Topic 3</title>
+    <script src="js/indexed.db.js" type="text/javascript"></script>
     <script src="js/script.js" type="text/javascript"></script>
+    <script src="js/dragndrop.js" type="text/javascript"></script>
   </head>
   <body>
-    <div>
-      <textarea name="textarea" id="textToSave" rows="8" cols="80"></textarea>
-    </div>
-    <div>
-      <button type="button" id="saveTextLS" name="save">Save LS</button>
-      <button type="button" id="clearTextLS" name="clear">Clear LS</button>
-      <button type="button" id="logTextLS" name="clear">Log Text LS</button>
-    </div>
-    <div>
-      <button type="button" id="saveTextIDB" name="save">Save IDB</button>
-      <button type="button" id="clearTextIDB" name="clear">Clear IDB</button>
-      <button type="button" id="logTextIDB" name="clear">Log Text IDB</button>
-    </div>
+
+      <div>
+        <textarea name="textarea" id="textToSave" rows="8" cols="80"></textarea>
+        <p id="status">File API & FileReader API not supported</p>
+      </div>
+      <div>
+        <button type="button" id="saveTextLS" name="save">Save LS</button>
+        <button type="button" id="clearTextLS" name="clear">Clear LS</button>
+        <button type="button" id="logTextLS" name="clear">Log Text LS</button>
+      </div>
+      <div>
+        <button type="button" id="saveTextIDB" name="save">Save IDB</button>
+        <button type="button" id="clearTextIDB" name="clear">Clear IDB</button>
+        <button type="button" id="logTextIDB" name="clear">Log Text IDB</button>
+      </div>
   </body>
 </html>
