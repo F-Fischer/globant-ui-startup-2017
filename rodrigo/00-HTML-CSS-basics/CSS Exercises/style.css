@@ -1,0 +1,86 @@
+html * {
+    /*CSSLint Warning: The universal selector (*) is known to be slow.*/
+    font-size: 14px;
+    font-family: Arial;
+}
+
+nav, section, aside {
+    float: left;
+}
+
+h1 {
+    font-size: 32px;
+    margin: 0;
+}
+
+p {
+    margin: 0;
+}
+
+.container {
+    padding: 6px;
+}
+
+.header {
+    background-color: LightGrey;
+    text-align: center;
+    font-size: 46px;
+    width: 100%;
+}
+
+.article {
+    text-align: center;
+}
+
+.footer {
+    font-size: 10px;
+    width: 100%;
+    background-color: LightGrey;
+    text-align: center;
+    /*  position: absolute;
+    bottom: 0;
+    This way, the footer stays at the very bottom of the page
+*/
+    clear: both/* This way, the footer stays after the floated elements*/
+}
+@media all and (max-width: 425px) {
+    h1 {
+        font-size: 16px;
+    }
+    .navigation {
+        width: 30%;
+    }
+    .content {
+        width: 70%;
+    }
+    .sidebar {
+        visibility: hidden; /* is this the best way of removing an element? (without using JS)*/
+    }
+}
+
+@media all and (min-width: 426px) {
+    .sidebar {
+        background-color: LightSkyBlue;
+        font-size: 10px;
+        width: 25%;
+    }
+    .navigation {
+        font-size: 12px;
+        background-color: LightSkyBlue;
+        width: 25%;
+    }
+    .content {
+        font-size: 14px;
+        width: 50%;
+    }
+}
+
+[class$="r"] {
+    /* CSSLint Warning: Attribute selectors with $= are slow!*/
+    background-color: magenta;
+}
+
+[class*="a"]:not([class$="r"]) {
+    /* CSSLint Warning: Attribute selectors with *= are slow!*/
+    background-color: blue;
+}

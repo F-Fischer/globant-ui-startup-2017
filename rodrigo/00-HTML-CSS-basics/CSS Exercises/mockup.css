@@ -1,0 +1,95 @@
+html * {
+    /*CSSLint Warning: The universal selector (*) is known to be slow.*/
+    font-size: 14px;
+    font-family: Arial;
+}
+
+.title {
+    float: left;
+    width: 25%;
+}
+
+.content {
+    float: right;
+    width: 75%;
+}
+
+.grid {
+    clear: both;
+    float: left;
+}
+
+/*-- cleafix hack -- */
+/*
+.clearfix:before, .clearfix:after {
+    content: "";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+*/
+@media all and (min-width: 1025px) {
+    .column {
+        float: left;
+        width: calc(33.3333% - 16px); /*calc, for better responsiveness*/
+        height: auto;
+        padding: 8px;
+        /*gutter*/
+        position: relative;
+    }
+    .column:nth-of-type(4){ /* We make the 4th element clear the float, so the img starts on a new row*/
+      clear: both;
+    }
+}
+
+@media all and (max-width:425px) {
+    .column {
+        float: left;
+        width: calc(100% - 16px);
+        /*calc, for better responsiveness*/
+        height: auto;
+        padding: 4px;
+        /*gutter*/
+        position: relative;
+    }
+}
+
+@media all and (max-width:1024px) and (min-width:426px) {
+    .column {
+        float: left;
+        width: calc(50% - 16px);
+        /*calc, for better responsiveness*/
+        height: auto;
+        padding: 6px;
+        /*gutter*/
+        position: relative;
+    }
+}
+
+.column:hover .caption {
+    opacity: 1;
+    transition: opacity .25s ease-in-out;
+}
+
+.caption {
+    position: absolute;
+    width: calc(100% - 16px);
+    height: calc(15% - 16px);
+    left: 8px;
+    top: 8px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    transition: opacity .15s ease-in-out;
+}
+
+img {
+    width: 100%;
+}
+
+p {
+    padding-left: 12px;
+    font-weight: bold;
+}

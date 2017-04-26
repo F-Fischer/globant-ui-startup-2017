@@ -1,0 +1,20 @@
+body{
+  padding-left: 16px;
+}
+
+.hidden {
+  opacity: 0;
+  transition: opacity 3s;
+}
+
+.visible{
+  opacity: 1;
+}
+
+.search {
+  padding-top: 16px;
+}
+
+.txtSearch {
+  clear: both;
+}
